@@ -56,7 +56,7 @@ func run(file string) error {
 		fmt.Printf("Labels for file: %s\n", file)
 		for j, ann := range resp.LogoAnnotations {
 			fmt.Printf("\tFound label: %d %s \tscore: %v\n", j, ann.Description, ann.Score)
-			json,_:=ann.MarshalJSON()
+			json, _ := ann.MarshalJSON()
 			fmt.Printf("\t\t%s", json)
 			found = true
 		}

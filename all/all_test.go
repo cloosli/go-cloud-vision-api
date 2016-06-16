@@ -1,9 +1,9 @@
 package main
 
 import (
-	"testing"
 	"github.com/stretchr/testify/assert"
 	"os"
+	"testing"
 )
 
 func TestLabel(t *testing.T) {

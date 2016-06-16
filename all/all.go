@@ -62,17 +62,17 @@ func run(file string) error {
 
 	p := func(j int, ann *vision.EntityAnnotation) {
 		fmt.Printf("\tFound: %d %s \tscore: %v\n", j, ann.Description, ann.Score)
-		json,_:=ann.MarshalJSON()
+		json, _ := ann.MarshalJSON()
 		fmt.Printf("\t\t%s\n", json)
 	}
 	pf := func(j int, ann *vision.FaceAnnotation) {
 		fmt.Printf("\tFound: %d %s \tscore: %v\n", j, ann.HeadwearLikelihood, ann.SurpriseLikelihood)
-		json,_:=ann.MarshalJSON()
+		json, _ := ann.MarshalJSON()
 		fmt.Printf("\t\t%s\n", json)
 	}
 	pi := func(ann *vision.ImageProperties) {
 		fmt.Printf("\tFound: %v\n", ann.DominantColors.Colors[0])
-		json,_:=ann.MarshalJSON()
+		json, _ := ann.MarshalJSON()
 		fmt.Printf("\t\t%s\n", json)
 	}
 
